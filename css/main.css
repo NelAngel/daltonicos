@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&family=Open+Sans:wght@400;500;700;800&display=swap');
+
+*,*:before,*:after {
+    box-sizing: inherit;
+}
+html {
+    box-sizing: border-box;
+    font-size:62.5%; /*1rem = 10px*/
+    height: 100%;
+}
+body {
+    font-family: 'Open Sans', 'Calibri';
+    font-size: 1.6rem;
+    line-height: 2; 
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+img {
+    max-width: 100%; 
+    width: 100%;
+    display: block;
+
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+}
+h1,h2{
+    margin: 0;
+}
+
+/**************************/
+
+/*Side header*/
+header{
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+.side-header{
+    background-color: #333;
+    padding: 0 6rem;
+    display: flex;
+    justify-content: space-between;
+}
+.logo-title{
+    font-size: 3rem;
+    font-weight: 800;
+}
+.nav {
+    display: flex;
+    gap: 20px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav a:hover {
+    color: #0056b3;
+}
+
+a:hover {
+    color: #ffcc00; 
+}
+
+
+/*Main*/
+.wrapper {
+    width: 70%;
+    margin: 0 auto; 
+}
+.wrapper .img-dalt{
+    width: 70%;
+    margin: 3rem auto;
+}
+
+
+/*Footer*/
+footer{
+    margin-top: auto;
+}
+.copyright{
+    background-color: #1d1d1d;
+}
+.copyright p{
+    margin: 0 0;
+    padding: 0.6rem 0;
+    font-size: 1.4rem;
+    text-align: center;
+    color: #b1b1b1;
+}

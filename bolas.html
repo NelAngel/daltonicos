@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/adultosStyles.css">
+    <link rel="icon" href="img/icon.jpg" type="image/png">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+        }
+
+        .side-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo-title {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav a {
+            text-decoration: none;
+            color: #007bff;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .nav a:hover {
+            color: #0056b3;
+        }
+
+        .wrapper {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            margin-top: 150px;
+        }
+
+        #gameContainer {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #007bff;
+        }
+
+        #balls-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .ball {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .ball:hover {
+            background-color: #007bff;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #ffffff;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+    <title>Test de Daltonismo</title>
+</head>
+
+<body>
+    <header>
+        <div class="side-header">
+            <div>
+                <a href="index.html" class="logo-title">Test de Daltonismo</a>
+            </div>
+            <div class="nav">
+                <a href="test-ninos.html">Niños</a>
+                <a href="bolas.html">Juego de bolas</a>
+                <a href="test-Adultos.html">Adultos</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="wrapper">
+            <div id="gameContainer">
+                <h1>Selecciona el color distinto</h1>
+                <div id="balls-container"></div>
+                <button onclick="checkAnswer()">Verificar respuesta</button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="copyright">
+            <p>&copy;2024 Test de Daltonismo - All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="JS/adultosScript.js"></script>
+    <script>
+        let differentColorIndex = Math.floor(Math.random() * 10);
+        let colors = generateRandomColors(differentColorIndex);
+
+        const ballsContainer = document.getElementById("balls-container");
+        for (let i = 0; i < 10; i++) {
+            const ball = document.createElement("div");
+            ball.className = "ball";
+            ball.style.backgroundColor = colors[i];
+            ball.dataset.index = i;
+            ball.onclick = () => selectColor(ball);
+            ballsContainer.appendChild(ball);
+        }
+
+        let selectedBall = null;
+
+        function selectColor(ball) {
+            if (selectedBall) {
+                selectedBall.style.backgroundColor = colors[parseInt(selectedBall.dataset.index)];
+            }
+
+            ball.style.backgroundColor = "gray";
+            selectedBall = ball;
+        }
+
+        function checkAnswer() {
+            if (selectedBall) {
+                const selectedIndex = parseInt(selectedBall.dataset.index);
+                if (selectedIndex === differentColorIndex) {
+                    alert("¡Correcto! Has encontrado la bola de color diferente.");
+                } else {
+                    alert("Incorrecto. Intenta de nuevo.");
+                }
+
+                differentColorIndex = Math.floor(Math.random() * 10);
+                colors = generateRandomColors(differentColorIndex);
+                const balls = document.getElementsByClassName("ball");
+                for (let i = 0; i < balls.length; i++) {
+                    balls[i].style.backgroundColor = colors[i];
+                }
+                selectedBall = null;
+            } else {
+                alert("Por favor, selecciona la bola que crees que es diferente antes de verificar.");
+            }
+        }
+
+        function generateRandomColors(differentColorIndex) {
+            const allColors = ["blue", "green", "yellow", "purple", "orange", "pink", "brown", "cyan", "magenta", "red"];
+            const colorsArray = Array.from({ length: 10 }, (_, i) => (i === differentColorIndex) ? getRandomColor() : allColors[differentColorIndex]);
+            return colorsArray;
+        }
+
+        function getRandomColor() {
+            const allColors = ["blue", "green", "yellow", "purple", "orange", "pink", "brown", "cyan", "magenta", "red"];
+            return allColors[Math.floor(Math.random() * 10)];
+        }
+    </script>
+</body>
+
+</html>

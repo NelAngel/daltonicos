@@ -1,0 +1,125 @@
+#gameContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+#imageContainer {
+    width: 400px; /* Modifica el tamaño según tus preferencias */
+    height: 400px; /* Modifica el tamaño según tus preferencias */
+    overflow: hidden; /* Oculta cualquier exceso de imagen que se extienda fuera del contenedor */
+}
+
+img {
+    width: 100%; /* Hace que la imagen ocupe el 100% del contenedor */
+    height: 100%; /* Hace que la imagen ocupe el 100% del contenedor */
+    object-fit: cover; /* Mantiene la proporción de la imagen y cubre completamente el contenedor */
+}
+
+#userInput {
+    margin-top: 20px;
+}
+
+#userNumbers {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  #userNumbers div {
+    margin: 5px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    display: inline-block;
+  }
+#keyboard {
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#clearButton{
+
+    margin-top: 10px; /* Ajusta el margen superior según tus preferencias */
+    margin-right: -250px;
+    padding: 15px 30px; /* Ajusta el espacio interno del botón según tus preferencias */
+    font-size: 18px; /* Ajusta el tamaño del texto según tus preferencias */
+    background-color: #e4431b; /* Color de fondo turquesa, puedes cambiarlo */
+    color: white; /* Color del texto blanco */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar el mouse */
+  }
+  
+  #checkButton{
+    
+    margin-top: -130px; /* Ajusta el margen superior según tus preferencias */
+    margin-left:-250px;
+    padding: 15px 30px; /* Ajusta el espacio interno del botón según tus preferencias */
+    font-size: 18px; /* Ajusta el tamaño del texto según tus preferencias */
+    background-color: #87ce05; /* Color de fondo turquesa, puedes cambiarlo */
+    color: white; /* Color del texto blanco */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar el mouse */
+  }
+  #noSeeButton {
+    margin-top: -30px; /* Ajusta el margen superior según tus preferencias */
+    margin-left: 540px;
+    padding: 15px 30px; /* Ajusta el espacio interno del botón según tus preferencias */
+    font-size: 18px; /* Ajusta el tamaño del texto según tus preferencias */
+    background-color: #ecbf1e; /* Color de fondo turquesa, puedes cambiarlo */
+    color: white; /* Color del texto blanco */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar el mouse */
+  }
+  
+  #clearButton:hover,
+  #checkButton:hover,
+  #noSeeButton:hover {
+    background-color: #ecbf1e; /* Cambia el color al pasar el mouse */
+  }
+  
+  /* Estilos para los botones numéricos */
+  #keyboard button {
+    margin: 5px;
+    padding: 15px 20px;
+    font-size: 16px;
+    background-color: #4285f4; /* Color de fondo azul, puedes cambiarlo */
+    color: white; /* Color del texto blanco */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar el mouse */
+  }
+  
+  #keyboard button:hover {
+    background-color: #1a73e8; /* Cambia el color al pasar el mouse */
+  }
+  
+  /* Agregado para los mensajes */
+  /* Agregado para los mensajes */
+  #messageContainer {
+    margin-top: 50px;
+    padding: 20px; /* Aumenta el padding para hacer más notorio el mensaje */
+    font-size: 24px; /* Aumenta el tamaño del texto del mensaje */
+    font-weight: bold; /* Hace que el texto sea más audaz/negrita */
+    text-align: center; /* Centra el texto */
+  }
+  
+  .correct {
+    color: green;
+  }
+  
+  .incorrect {
+    color: red;
+  }
+  
+  

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/adultosStyles.css">
+    <link rel="icon" href="img/icon.jpg" type="image/png">
+    <style>
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: white;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+        }
+
+        .side-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo-title {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav a {
+            text-decoration: none;
+            color: #007bff;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .nav a:hover {
+            color: #0056b3;
+        }
+
+
+    </style>
+    <title>Test de Daltonismo</title>
+</head>
+
+<body>
+
+    <header>
+        <div class="side-header">
+            <div>
+                <a href="index.html" class="logo-title">Test de Daltonismo</a>
+            </div>
+            <div class="nav">
+                <a href="test-ninos.html">Niños</a>
+                <a href="bolas.html">Juego de bolas</a>
+                <a href="test-Adultos.html">Adultos</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="wrapper">
+            <div id="gameContainer">
+                <div id="imageContainer"></div>
+                <div id="userInput">
+                    <div id="userNumbers"></div>
+                </div>
+                <button id="clearButton">Borrar Números</button>
+                <div id="keyboard"></div>
+                <button id="checkButton">Verificar Respuesta</button>
+                <div id="messageContainer"></div>
+            </div>
+            <button id="noSeeButton">No veo</button>
+        </div>
+    </main>
+
+    <footer>
+        <div class="copyright">
+            <p>&copy;2024 Test de Daltonismo - All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="JS/adultosScript.js"></script>
+</body>
+
+</html>

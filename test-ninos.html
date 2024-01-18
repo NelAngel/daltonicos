@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/ninosStyles.css">
+    <link rel="icon" href="img/icon.jpg" type="image/png">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #333;
+            color: #ffffff;
+            text-align: center;
+            padding: 15px 0;
+        }
+
+        .side-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo-title {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav a {
+            text-decoration: none;
+            color: #007bff;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .nav a:hover {
+            color: #0056b3;
+        }
+
+        .wrapper {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        h1, h2 {
+            color: #007bff;
+        }
+
+        p {
+            color: #343a40;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .randomImage {
+            max-width: 100%;
+            height: auto;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .number-cards {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .drop-area {
+            padding: 10px;
+            margin-top: 20px;
+            background-color: #007bff;
+            color: #ffffff;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .drop-area:hover {
+            background-color: #0056b3;
+        }
+
+        footer {
+            background-color: black;
+            color: #ffffff;
+            text-align: center;
+            padding: 15px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+    <title>Test de Daltonismo</title>
+</head>
+
+<body>
+
+    <header>
+        <div class="side-header">
+            <div>
+                <a href="index.html" class="logo-title">Test de Daltonismo</a>
+            </div>
+            <div class="nav">
+                <a href="test-ninos.html">Niños</a>
+                <a href="bolas.html">Bolas</a>
+                <a href="test-Adultos.html">Adultos</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="wrapper">
+            <h1>Tests para niños</h1>
+            <p>Esta sección está dedicada a ayudar a los niños a entender mejor su visión del color a través de pruebas divertidas y educativas.</p>
+
+            <div class="container">
+                <!-- Solo se mostrará la imagen al azar sin tarjeta -->
+                <img src="" id="randomImage" class="randomImage" alt="Imagen al azar" draggable="false"> 
+        
+                <!-- Tarjetas con números correspondientes -->
+                <div class="number-cards" id="numberCards"></div>
+                
+                <div class="drop-area" id="drop-area">Soltar aquí</div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="copyright">
+            <p>&copy;2024 Test de Daltonismo - All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/ninosScript.js"></script>
+</body>
+
+</html>
